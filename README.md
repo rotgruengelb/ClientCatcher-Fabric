@@ -37,3 +37,5 @@ The Mod can detect several clients such as Forge, Fabric, LiteLoader¹, Lunar¹,
 | Detect Client/Brand | ✔️                    | ✔️               |
 | Propper Permission  | ✔️                    | 🟨 Working on... |
 | Detect Mods         | Forge 1.7.10 - 1.12.2  | ⛔ Not Planned   |
+| Placeholder Support | ✔️                    | 🟡 Planned       |
+| Config              |                        | 🟡 When needed   |
