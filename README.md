@@ -5,10 +5,10 @@
 
 ///// [![Banner] {Awaiting aproval from orignal ClientCatcher Plugin to use the banner}
 
-A **Server-side** fabric Mod to get the client with which a player has connected to your server.
+A **Server-side** Fabric Mod to get the client with which a player has connected to your server.
 
 ## Info
-Looking for the original for **Velocity**? [ClientCatcher velocity plugin on Modrinth](https://modrinth.com/plugin/clientcatcher).
+Looking for the [**Velocity ClientCatcher Plugin**](https://modrinth.com/plugin/clientcatcher)?
 
 This Mod aims to have the same/similar Functionality as the Velocity Plugin. See [Roadmap](https://github.com/rotgruengelb/ClientCatcher-Fabric#Roadmap).
 
