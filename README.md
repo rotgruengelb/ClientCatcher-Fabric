@@ -10,7 +10,7 @@ A **Server-side** Fabric Mod to get the client with which a player has connected
 ## Info
 Looking for the [**Velocity ClientCatcher Plugin**](https://modrinth.com/plugin/clientcatcher)?
 
-This Mod aims to have the same/similar Functionality as the Velocity Plugin. See [Roadmap](https://github.com/rotgruengelb/ClientCatcher-Fabric#Roadmap).
+This Mod aims to have the same/similar Functionality as the Velocity Plugin. See [Roadmap & Features](https://github.com/rotgruengelb/ClientCatcher-Fabric#Roadmap&Features).
 
 The initial code is based on the work of [C10udburst](https://github.com/C10udburst)s 1.18.2 Fabric [clientbrand](https://github.com/C10udburst/clientbrand) mod.
 
@@ -26,6 +26,8 @@ The Mod can detect several clients such as Forge, Fabric, LiteLoader¹, Lunar¹,
 
 ## Commands
 
-#### Client `/brand <player>`
+### Client `/brand <player>`
 ##### Permission: `Function Permission Level`
-Shows you a player's client.
+##### Shows you a player's client.
+
+## Roadmap & Features
