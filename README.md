@@ -1,7 +1,7 @@
 # ClientCatcher-Fabric
 [![WorkFlow Status](https://img.shields.io/github/actions/workflow/status/rotgruengelb/ClientCatcher-Fabric/build.yml)](https://github.com/rotgruengelb/ClientCatcher-Fabric/actions/workflows/build.yml)
 [![Version](https://img.shields.io/github/v/release/rotgruengelb/ClientCatcher-Fabric?color=FFF0&style=flat-square)](https://modrinth.com/mod/clientcatcher)
-[![Discord](https://img.shields.io/discord/899740810956910683?color=7289da&label=Discord)](https://discord.gg/-)
+[![Discord](https://img.shields.io/discord/899740810956910683?color=7289da&label=Discord)](https://discord.gg/rtWvZ88DFr)
 
 
 [![Banner](https://i.imgur.com/6rjflSj.jpg)](https://modrinth.com/mod/clientcatcher)
