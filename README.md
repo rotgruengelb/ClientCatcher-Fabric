@@ -3,8 +3,8 @@
 [![Version](https://img.shields.io/github/v/release/rotgruengelb/ClientCatcher-Fabric?color=FFF0&style=flat-square)](https://modrinth.com/mod/clientcatcher)
 [![Discord](https://img.shields.io/discord/899740810956910683?color=7289da&label=Discord)](https://discord.gg/-)
 
-///// [![Banner] {Awaiting aproval from orignal ClientCatcher Plugin to use the banner}
 
+[![Banner](https://i.imgur.com/6rjflSj.jpg)](https://modrinth.com/mod/clientcatcher)
 A **Server-side** Fabric Mod to get the client with which a player has connected to your server.
 
 ## Info
