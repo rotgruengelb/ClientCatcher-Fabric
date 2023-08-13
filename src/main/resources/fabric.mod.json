@@ -3,12 +3,13 @@
 	"id": "clientcatcher",
 	"version": "${version}",
 	"name": "clientcatcher",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "ClientCatcher(-Fabric) allows Server admins to see with what Client brand (vanilla, fabric, forge, quilt, luna, etc) players are connected with.",
 	"authors": [
 		"rotgruengelb"
 	],
 	"contact": {
-		"sources": "https://github.com/FabricMC/clientcatcher-fabric"
+		"sources": "https://github.com/rotgruengelb/clientcatcher-fabric",
+		"modrinth": "https://modrinth.com/mod/clientcatcher"
 	},
 	"license": "MIT",
 	"icon": "assets/clientcatcher/icon.png",
@@ -18,14 +19,12 @@
 			"net.rotgruengelb.clientcatcher.ClientCatcher"
 		]
 	},
-	"mixins": [
-		"clientcatcher.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"fabric-permissions-api-v0": "*"
 	},
 	"suggests": {}
 }

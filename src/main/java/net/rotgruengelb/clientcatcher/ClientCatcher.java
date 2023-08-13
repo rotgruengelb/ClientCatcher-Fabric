@@ -2,25 +2,28 @@ package net.rotgruengelb.clientcatcher;
 
 import com.mojang.authlib.GameProfile;
 
+import me.lucko.fabric.api.permissions.v0.Permissions;
 import net.fabricmc.api.DedicatedServerModInitializer;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 
 import net.minecraft.command.argument.GameProfileArgumentType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.network.packet.c2s.play.CustomPayloadC2SPacket;
+import net.minecraft.server.PlayerManager;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.*;
 import net.minecraft.util.Formatting;
 
+import net.rotgruengelb.clientcatcher.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.function.Predicate;
 
 import static net.minecraft.server.command.CommandManager.*;
 import static com.mojang.brigadier.Command.SINGLE_SUCCESS;
@@ -60,11 +63,13 @@ public class ClientCatcher implements DedicatedServerModInitializer {
 
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
 			if (environment.dedicated) {
-				dispatcher.register(literal("brand").requires((source) -> source.hasPermissionLevel(source.getServer().getFunctionPermissionLevel())).then(argument("player", GameProfileArgumentType.gameProfile()).executes(ctx -> {
+				dispatcher.register(literal("clientcatcher")
+						.requires(Permissions.require("clientcatcher.command",4))
+						.then(literal("client")
+							.requires(Permissions.require("clientcatcher.command.client",4))
+							.then(argument("player", GameProfileArgumentType.gameProfile()).executes(ctx -> {
 					for (GameProfile profile : GameProfileArgumentType.getProfileArgument(ctx, "player")) {
-						if (profile == null) continue;
-						String brand = clientBrands.get(profile.getId());
-						if (brand == null) brand = "[brand not found]";
+						String brand = Api.getPlayerBrand(profile);
 						var brandText = Text.literal(brand);
 						brandText.setStyle(brandText.getStyle()
 								.withColor(brand.equals("vanilla") ? Formatting.GREEN : Formatting.YELLOW)
@@ -83,7 +88,7 @@ public class ClientCatcher implements DedicatedServerModInitializer {
 					}
 
 					return SINGLE_SUCCESS;
-				})));
+				}))));
 			}
 		});
 	}
