@@ -30,7 +30,6 @@ public class ClientCatcher implements DedicatedServerModInitializer {
 
     @Override
     public void onInitializeServer() {
-
         ServerPlayNetworking.registerGlobalReceiver(CustomPayloadC2SPacket.BRAND, (server, player, handler, buf, responseSender) -> {
             try {
                 var brand = buf.readString(1024).strip().trim();
